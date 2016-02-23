@@ -1,0 +1,26 @@
+//PARTIALS
+@import "setup";
+
+// VARIABLES
+$teal:#114b5f;
+$lagoon:#028090;
+$peppermint:#e4fde1;
+$wedgewood:#456990;
+
+
+
+//FONT FAMILY
+$mainFont:font-family: 'Open Sans', sans-serif;
+$headingFont:font-family: 'Abril Fatface', cursive;
+
+// BASE STYLES
+html{
+	font-size: 62.5%;
+}
+
+body{
+	font-size: 1.2rem;
+	font-family: $mainFont;
+}
+
+//
