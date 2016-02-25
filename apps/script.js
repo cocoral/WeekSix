@@ -32,7 +32,6 @@ coolApp.init = function () {
 	//code to start app goes in here
 	coolApp.gettime();
 	coolApp.getinputs();
-	
 };
 
 coolApp.gettime = function () {
@@ -72,14 +71,13 @@ coolApp.getinputs = function () {
 		});
 		diet = diet.join(' ');
 		console.log(diet);
-		coolApp.getRecipe(allergy,diet);
+		coolApp.getRecipe(allergy, diet);
 	});
-
 };
 
 // coolApp.getinputs();
 
-coolApp.getRecipe = function (allergy,diet) {
+coolApp.getRecipe = function (allergy, diet) {
 	console.log(mealtime);
 	console.log(allergy, diet);
 	$.ajax({
