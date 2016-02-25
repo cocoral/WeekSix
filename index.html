@@ -7,6 +7,12 @@
 	<link href='https://fonts.googleapis.com/css?family=Open+Sans|Abril+Fatface' rel='stylesheet' type='text/css'>
 
 	<link rel="stylesheet" type ="text/css" href="styles/style.css">
+
+	<!-- Clock Java and CSS  -->
+	<link rel="stylesheet" href="styles/flipclock.css">
+	
+	<!-- Clock Java and CSS  -->
+
 	<title>Munch Time!</title>
 	<script id="recipeTemplate" type='x-handlebars-template'>
 		<div>
@@ -31,6 +37,10 @@
 		</ul>		
 	</nav>
 
+	<!-- clock -->
+	<div class="clock" style="margin:2em;"></div>
+	<!-- clock -->
+	
 	<div class="hero">
 		<h1>Get food.</h1>
 		<div class="your-clock">
@@ -64,8 +74,24 @@
 	</main>
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script src="apps/script.js"></script>
+	
 	<script src = "https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js"></script>
 	<script src='apps/script.js'></script>
+	<script src="styles/flipclock.js"></script>	
+
+	<!-- ------------------------------Clock javascript -->
+		<script type="text/javascript">
+				var clock;
+				
+				$(document).ready(function() {
+					clock = $('.clock').FlipClock({
+						clockFace: 'TwelveHourClock',
+						showSeconds: false
+					});
+				});
+			</script>
+		<!-- ------------------------------Clock javascript -->
 
 </body>
 

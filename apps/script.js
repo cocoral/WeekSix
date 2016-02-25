@@ -146,3 +146,4 @@ $(function () {
 	console.log('oh document ready')
 	coolApp.init();
 });
+
