@@ -10,8 +10,8 @@ $wedgewood:#456990;
 
 
 //FONT FAMILY
-$mainFont:font-family: 'Open Sans', sans-serif;
-$headingFont:font-family: 'Abril Fatface', cursive;
+$mainFont: 'Open Sans', sans-serif;
+$headingFont:'Abril Fatface', cursive;
 
 // BASE STYLES
 html{
@@ -20,7 +20,8 @@ html{
 
 body{
 	font-size: 1.2rem;
-	font-family: $mainFont;
+	font-family: $headingFont;
+	background:yellow;
 }
 
 //
