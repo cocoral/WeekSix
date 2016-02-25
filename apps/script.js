@@ -18,11 +18,9 @@
 
 var coolApp = {};
 
-
 coolApp.appId = '9a82c4a1';
 
 coolApp.appKey = 'd750f8a3c48c097b49c0082762f6a0ae';
-
 
 var mealtime = '';
 
@@ -34,7 +32,6 @@ coolApp.init = function () {
 	//code to start app goes in here
 	coolApp.gettime();
 	coolApp.getinputs();
-	
 };
 
 coolApp.gettime = function () {
@@ -74,14 +71,13 @@ coolApp.getinputs = function () {
 		});
 		diet = diet.join(' ');
 		console.log(diet);
-		coolApp.getRecipe(allergy,diet);
+		coolApp.getRecipe(allergy, diet);
 	});
-
 };
 
 // coolApp.getinputs();
 
-coolApp.getRecipe = function (allergy,diet) {
+coolApp.getRecipe = function (allergy, diet) {
 	console.log(mealtime);
 	console.log(allergy, diet);
 	$.ajax({
