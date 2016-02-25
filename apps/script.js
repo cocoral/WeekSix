@@ -33,6 +33,7 @@ var start = 0;
 var recipeid = '';
 
 coolApp.init = function(){
+
 	coolApp.gettime();
 	coolApp.getinputs();
 };
@@ -101,6 +102,7 @@ coolApp.getRecipe = function (allergy, diet, start) {
 		}
 
 	}).then(function (res) {
+		displayedRecipes = res;
 		console.log(res);
 		$.each(res.matches, function(i, object){
 			console.log(object);
@@ -141,6 +143,7 @@ coolApp.displayRecipes = function () {
 };
 
 $(function () {
+	console.log('oh document ready')
 	coolApp.init();
 });
 
