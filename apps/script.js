@@ -28,7 +28,10 @@ var allergy = [];
 
 var diet = [];
 
+var displayedRecipes = {};
+
 coolApp.init = function () {
+	console.log('yeah init is running')
 	//code to start app goes in here
 	coolApp.gettime();
 	coolApp.getinputs();
@@ -92,6 +95,7 @@ coolApp.getRecipe = function (allergy, diet) {
 		}
 
 	}).then(function (res) {
+		displayedRecipes = res;
 		console.log(res);
 	});
 };
@@ -101,5 +105,6 @@ coolApp.getRecipe = function (allergy, diet) {
 coolApp.displayRecipes = function () {};
 
 $(function () {
+	console.log('oh document ready')
 	coolApp.init();
 });

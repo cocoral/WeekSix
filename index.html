@@ -11,16 +11,19 @@
 	<script id="recipeTemplate" type='x-handlebars-template'>
 		<div>
 		<h2>{{name}}</h2>
+		<div class="image">{{image}}</div>
+		{{cookTime}}
 		<li>
-		{{discription}}
+		{{#each ingridients}}
 		</li>
-
+		<a href="{{recipeUrl}}"> Click here to see the full recipe!</a>
 		</div>
 	</script>
 
 </head>
 
 <body>
+
 	<nav>
 		<img src="" alt="">
 		<ul>
@@ -58,9 +61,6 @@
 	<main class="recipes">
 		
 	</main>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-	<script src="apps/script.js"></script>
-	
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 	<script src = "https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js"></script>
@@ -69,4 +69,3 @@
 </body>
 
 </html>
-
