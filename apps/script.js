@@ -143,3 +143,4 @@ coolApp.displayRecipes = function () {
 $(function () {
 	coolApp.init();
 });
+
