@@ -5,7 +5,7 @@
 	<meta name="description" content= "">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link href='https://fonts.googleapis.com/css?family=Open+Sans|Abril+Fatface' rel='stylesheet' type='text/css'>
-	<link rel="stylesheet" type ="text/css" href="styles/main.css">
+	<link rel="stylesheet" type ="text/css" href="styles/style.css">
 	<title></title>
 </head>
 
@@ -24,7 +24,8 @@
 		</div>
 		<form action="" class="whatToEat">
 			<ul class='Allergies'>
-				<li><input type="checkbox" value="" checked>Any allergies?</li>
+				<!-- <li><input type="checkbox" value="" checked>Any allergies?</li> -->
+				<p>Any Allergies?</p>
 				<li><input type="checkbox" value="Gluten" >Gluten</li>
 				<li><input type="checkbox" value="Egg" >Egg</li>
 				<li><input type="checkbox" value="Peanuts" >Peanuts</li>
@@ -32,12 +33,14 @@
 				<li><input type="checkbox" value="Seafood" >Seafood</li>
 			</ul>
 			<ul class="diet">
-				<li><input type="checkbox" value="" checked>Diet?</li>
-				<li><input type="checkbox" value="Lacto vegetarian"></li>
-				<li><input type="checkbox" value="Ovo vegetarian"></li>
-				<li><input type="checkbox" value="Pescetarian"></li>
-				<li><input type="checkbox" value="Vegan"></li>
-				<li><input type="checkbox" value="Vegetarian"></li>
+		<!-- 		<li><input type="checkbox" value="" checked>Diet?</li> -->
+				<p>Diet?</p>
+				<li><input type="checkbox" value="Lacto vegetarian">Lacto Vegetarian</li>
+				<li><input type="checkbox" value="Ovo vegetarian">Ovo Vegetarian</li>
+				<li><input type="checkbox" value="Pescetarian">Pescetarian</li>
+				<li><input type="checkbox" value="Vegetarian">Vegetarian</li>
+				<li><input type="checkbox" value="Vegan">Vegan</li>
+				
 			</ul>
 			<input type="submit" value="Feed Me!">
 		</form>
@@ -46,5 +49,9 @@
 	<main class="recipes">
 		
 	</main>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script src="apps/script.js"></script>
 	
 </body>
+
+</html>
