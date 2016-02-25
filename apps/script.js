@@ -8,7 +8,7 @@
 
 // $Ajax call - Get information from Yummly API
 
-// Print on thml
+// Print on html
 
 // Print button -send to printer
 
@@ -28,11 +28,15 @@ var allergy = [];
 
 var diet = [];
 
-coolApp.init = function () {
-	//code to start app goes in here
+var start = 0;
+
+var recipeid = '';
+
+coolApp.init = function(){
 	coolApp.gettime();
 	coolApp.getinputs();
 };
+
 
 coolApp.gettime = function () {
 	//code to gather info on time and inputs
@@ -72,14 +76,17 @@ coolApp.getinputs = function () {
 		diet = diet.join(' ');
 		console.log(diet);
 		coolApp.getRecipe(allergy, diet);
+
+		coolApp.getMore(allergy, diet);
 	});
 };
 
 // coolApp.getinputs();
 
-coolApp.getRecipe = function (allergy, diet) {
+coolApp.getRecipe = function (allergy, diet, start) {
 	console.log(mealtime);
 	console.log(allergy, diet);
+
 	$.ajax({
 		url: 'http://api.yummly.com/v1/api/recipes?_app_id=9a82c4a1&_app_key=d750f8a3c48c097b49c0082762f6a0ae',
 		type: 'GET',
@@ -88,17 +95,50 @@ coolApp.getRecipe = function (allergy, diet) {
 			requirePictures: true,
 			q: mealtime,
 			'allowedAllergy[]': allergy,
-			'allowedDiet[]': diet
+			'allowedDiet[]': diet,
+			maxResult: 3,
+			start:start
 		}
 
 	}).then(function (res) {
 		console.log(res);
+		$.each(res.matches, function(i, object){
+			console.log(object);
+			console.log(object.id);
+			recipeid = object.id;
+			$.ajax({
+				url: 'http://api.yummly.com/v1/api/recipe/' + recipeid + '?_app_id=9a82c4a1&_app_key=d750f8a3c48c097b49c0082762f6a0ae',
+				type:'GET',
+				dataType:'jsonp'
+			}).then(function(meal){
+
+				console.log(meal);
+			});
+
+
+
+		});
 	});
 };
 
-// coolApp.getRecipe();
 
-coolApp.displayRecipes = function () {};
+coolApp.getMore = function(allergy, diet){
+	$('.more').on('click', function(){
+		start = start + 3;
+		console.log(start);
+		coolApp.getRecipe(allergy, diet, start);
+	});
+};
+
+
+coolApp.displayRecipes = function () {
+
+
+
+
+
+
+};
 
 $(function () {
 	coolApp.init();
