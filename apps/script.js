@@ -32,6 +32,9 @@ var start = 0;
 
 var recipeid = '';
 
+var displayRecipes = [];
+
+
 coolApp.init = function () {
 
 	coolApp.gettime();
@@ -103,8 +106,11 @@ coolApp.getRecipe = function (allergy, diet, start) {
 	}).then(function (res) {
 		console.log(res);
 		$.each(res.matches, function (i, object) {
+
 			console.log(object);
 			console.log(object.id);
+
+
 			recipeid = object.id;
 			$.ajax({
 				url: 'http://api.yummly.com/v1/api/recipe/' + recipeid + '?_app_id=9a82c4a1&_app_key=d750f8a3c48c097b49c0082762f6a0ae',
@@ -112,7 +118,17 @@ coolApp.getRecipe = function (allergy, diet, start) {
 				dataType: 'jsonp'
 			}).then(function (meal) {
 
+
 				console.log(meal);
+				var info = {};
+				info.name = meal.name;
+				info.time = meal.totalTime;
+				info.rating = meal.rating;
+				info.source = meal.source.sourceRecipeUrl;
+				info.ingredient = meal.ingredientLines;
+				info.image = meal.images[0].hostedLargeUrl;
+				// displayRecipes.push(info);
+				coolApp.displayRecipes(info);
 			});
 		});
 	});
@@ -126,9 +142,17 @@ coolApp.getMore = function (allergy, diet) {
 	});
 };
 
-coolApp.displayRecipes = function () {};
+
+
+coolApp.displayRecipes = function (info) {
+	console.log(info);
+	var recipeHtml = $('#recipeTemplate').html();
+	var template = Handlebars.compile(recipeHtml);
+	// console.log(template);
+	$('#recipes').append(template(info));
+};
 
 $(function () {
-	console.log('oh document ready');
+
 	coolApp.init();
 });
