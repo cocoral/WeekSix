@@ -456,5 +456,94 @@ html {
 
 body {
   font-size: 1.2rem;
-  font-family: "Abril Fatface", cursive;
-  background: yellow; }
+  font-family: "Open Sans", sans-serif; }
+
+.hero {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  background-image: url("../asset/hero.jpg");
+  background-size: cover; }
+
+.clock {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center; }
+
+nav {
+  background: #114b5f;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 10px 40px; }
+  nav img {
+    width: 200px; }
+  nav button {
+    background: #114b5f;
+    border: none;
+    color: #cccccc;
+    text-transform: uppercase;
+    font-size: 1.4rem;
+    font-family: "Open Sans", sans-serif; }
+    nav button:hover {
+      font-weight: bolder; }
+
+h1 {
+  margin: 0;
+  padding: 30px;
+  color: #cccccc;
+  font-size: 2rem; }
+
+.buttons {
+  padding: 100px; }
+
+details {
+  color: #cccccc; }
+
+summary {
+  padding: 15px;
+  border: 2px solid #cccccc;
+  font-size: 1.5rem;
+  margin: 10px 0; }
+  summary p {
+    display: inline-block;
+    margin: 0; }
+  summary img {
+    width: 25px;
+    float: right; }
+
+summary::-webkit-details-marker {
+  display: none; }
+
+ul.allergies, ul.diet {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: flex-start;
+      -ms-flex-pack: start;
+          justify-content: flex-start; }
+
+ul.allergies li, ul.diet li {
+  list-style: none;
+  margin-right: 15px; }
