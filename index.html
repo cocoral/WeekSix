@@ -25,7 +25,7 @@
 		<li>{{this}}</li>
 		{{/each}}
 		</ul>
-    	<a href="{{source}}"> Click here to see the full recipe!</a>
+    	<a href="{{source}}" target="_blank">Click here to see the full recipe!</a>
 		</div>
 	</script>
 
@@ -34,42 +34,57 @@
 <body>
 
 	<nav>
-		<img src="" alt="">
-		<ul>
-			<li>About</li>
-		</ul>		
+		<img src="asset/logo.png" alt="">
+		
+			<button>About</button>
+			
 	</nav>
 
-	<!-- clock -->
-	<div class="clock" style="margin:2em;"></div>
-	<!-- clock -->
 	
 	<div class="hero">
-		<h1>Get food.</h1>
-		<div class="your-clock">
-			<p>My clock goes here.</p>
+	<!-- hero image by Todd Quackenbush -->
+		
+			
+		
+			<!-- clock -->
+			<div class="clock" style="margin:2em;"></div>
+			<!-- clock -->
+				
+			<div class="buttons">
+				<h1>At MunchTime, we inspire your appetite with carefully selected recipes to fit the time of day.</h1>
+				<form action="" class="whatToEat">
+					<details>
+						
+						<summary class="clearfix"><p>Any Allergies?</p><img src="asset/plus.svg" alt=""></summary>
+						<ul class='Allergies'>
+							<label for="gluten">Gluten</label>
+							<li><input type="checkbox" value="393^Gluten-Free" id="gluten"></li>
+							<label for="egg">Egg</label>
+							<li><input type="checkbox" value="397^Egg-Free" id="egg"></li>
+							<label for="peanuts">Peanuts</label>
+							<li><input type="checkbox" value="394^Peanut-Free" id="peanuts"></li>
+							<label for="dairy">Dairy</label>
+							<li><input type="checkbox" value="396^Dairy-Free" id="dairy"></li>
+							<label for="seafood">Seafood</label>
+							<li><input type="checkbox" value="398^Seafood-Free" id="seafood"></li>
+						</ul>
+					</details>
+		
+					<details>
+						
+						<summary class="clearfix"><p>Diet?</p><img src="asset/plus.svg" alt=""></summary>
+						<ul class="diet">
+							<label for="vegetarian">Vegetarian</label>
+							<li><input type="checkbox" value="387^Lacto-ovo vegetarian" id="vegetarian"></li>
+							<label for="vegan">Vegan</label>
+							<li><input type="checkbox" value="386^Vegan" id="vegan"></li>
+						</ul>
+					</details>
+					<input type="submit" value="Feed Me!">
+				</form>
+			</div>
 		</div>
-		<form action="" class="whatToEat">
-			<ul class='Allergies'>
-				<!-- <li><input type="checkbox" value="" checked>Any allergies?</li> -->
-				<p>Any Allergies?</p>
-				<li><input type="checkbox" value="393^Gluten-Free" >Gluten</li>
-				<li><input type="checkbox" value="397^Egg-Free" >Egg</li>
-				<li><input type="checkbox" value="394^Peanut-Free" >Peanuts</li>
-				<li><input type="checkbox" value="396^Dairy-Free" >Dairy</li>
-				<li><input type="checkbox" value="398^Seafood-Free" >Seafood</li>
-			</ul>
-			<ul class="diet">
-		<!-- 		<li><input type="checkbox" value="" checked>Diet?</li> -->
-				<p>Diet?</p>
-				
-				<li><input type="checkbox" value="387^Lacto-ovo vegetarian">Vegetarian</li>
-				<li><input type="checkbox" value="386^Vegan">Vegan</li>
-				
-			</ul>
-			<input type="submit" value="Feed Me!">
-		</form>
-	</div>
+	
 
 	<main id="content">
 		<section id='recipes'></section>
