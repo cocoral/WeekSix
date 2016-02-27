@@ -38,6 +38,14 @@ coolApp.init = function () {
 
 	coolApp.gettime();
 	coolApp.getinputs();
+
+	$('#button').on('click', function (e) {
+		$('#about').fadeIn();
+	});
+
+	$('#overlay-close').on('click', function (e) {
+		$('#about').fadeOut();
+	});
 };
 
 coolApp.gettime = function () {
@@ -148,6 +156,5 @@ coolApp.displayRecipes = function (info) {
 };
 
 $(function () {
-
 	coolApp.init();
 });

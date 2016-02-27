@@ -32,11 +32,37 @@
 </head>
 
 <body>
+	<!-- --------------- About full page Menu ---->
+	<div id="about">
+		<div class="wrapper">
+			<header class="overlay-header">
+				<!-- <img src="asset/logo.png" alt=""> -->
+				<button id="overlay-close">
+					<img src="asset/x.png">
+				</button>
+			</header>
 
+			<div class="overlay-container">
+				<!-- --- About Left ---->
+				<div class="main">
+					<h2>Recipes on time</h2>
+					<p class="desc"> At MunchTime, we inspire your appetite with carefully selected recipes to fit the time of day.</p>
+					
+					<p class="credit"> Designed and Coded by <a href="http://coralxhe.com" target="_blank">Coral He</a>, <a href="http://lauraculham.com" target="_blank">Laura Culham</a> and <a href="http://lukediamantopoulos.com" target="_blank">Luke Diamantopoulos</a></p>
+					
+					<p class="made">Made with the <a href="https://developer.yummly.com/" target="_blank">Yummlly API</a></p>
+					
+					<a href="https://twitter.com/share" class="twitter-share-button" data-text="Hungry?" data-size="large">Tweet</a>
+
+				</div> <!--  left -->
+			</div> <!--  overlay-container -->
+		</div>  <!--  wrapper -->
+	</div>  <!--  about -->
+	<!-- --------------- About full page Menu ---->
 	<nav>
 		<img src="asset/logo.png" alt="">
 		
-			<button>About</button>
+			<button id="button" >About</button>
 			
 	</nav>
 
@@ -96,6 +122,9 @@
 	<script src = "https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js"></script>
 	<script src='apps/script.js'></script>
 	<script src="styles/flipclock.js"></script>	
+	<!-- twitter button  -->
+	<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+	<!-- twitter button  -->
 
 	<!-- ------------------------------Clock javascript -->
 		<script type="text/javascript">
