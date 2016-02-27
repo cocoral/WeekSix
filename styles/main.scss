@@ -22,7 +22,6 @@ html{
 body{
 	font-size: 1.2rem;
 	font-family: $mainFont;
-	
 }
 img{
 	width:100%;
@@ -31,15 +30,11 @@ img{
 
 
 .hero {
-	
 	display:flex;
 	flex-direction:row;
 	background-image: url('../asset/hero.jpg');
 	background-size: cover;
-	
-
-
-
+	height:100vh;
 }
 
 	
@@ -48,6 +43,8 @@ img{
 	flex-direction:row;
 	justify-content:center;
 	align-items:center;
+	padding:300px 0;
+
 }
 
 nav {
@@ -67,47 +64,57 @@ nav {
 		text-transform: uppercase;
 		font-size: 1.4rem;
 		font-family: $mainFont;
-		&:hover {
-			font-weight: bolder;
-		}
+	
 	}
-
 }
+
+
 
 
 h1 {
 	margin:0;
-	padding:30px;
+	padding:50px 0px;
 	color:$mutedwhite;
-	font-size: 2rem;
+	font-size: 2.5rem;
+	font-family: $headingFont;
+}
 
+h2 {
+
+	color:$mutedwhite;
+	font-size: 1.8rem;
 }
 
 .buttons {
-	padding:100px;
-	
+	padding:100px 30px;
+	background-color:rgba(0,0,0,.7);
 
 }
 
 details{
 	color:$mutedwhite;
-
+	
 }
-
-
 
 summary {
 	padding:15px;
+	max-width: 400px;
 	border:2px solid $mutedwhite;
 	font-size: 1.5rem;
-	margin:10px 0;
+	margin:10px auto;
+	outline:none;
+	transition:all .3s;
+	&:hover {
+		background:rgba(69,105,144,.5);
+	}
 
 	p{
 		display:inline-block;
 		margin:0;
+		text-transform: uppercase;
 	}
 	img {
-		width:25px;
+		width:20px;
 		float:right;
 	}
 }
@@ -118,15 +125,90 @@ summary::-webkit-details-marker {
 	}
 
 ul.allergies, ul.diet {
-	display:flex;
-	justify-content:flex-start;
+	margin: 0 auto;
+	padding:0;
+	max-width: 400px;
+
 
 }
 
 ul.allergies li, ul.diet li {
 	list-style: none;
-	margin-right: 15px;
+	margin: 0px auto;
+	float:left;
+
+
 }
+
+input[type="checkbox"] {
+	display:none;
+}
+
+input[type="checkbox"] + label {
+	border: 1px solid rgba(0,0,0,.0);
+	padding:4px;
+	margin:3px;
+	transition: all .2s;
+}
+
+input[type="checkbox"] + label:hover {
+	background:rgba(69,105,144,.5);
+}
+
+input[type="checkbox"]:checked + label {
+	border:1px solid $mutedwhite;
+	color:$mutedwhite;
+	background:rgba(69,105,144,.5);
+}
+
+
+.submit {
+	width: 250px;
+	background:$teal;
+	color:$mutedwhite;
+	padding:10px 20px;
+	margin: 20px 0;
+	border:none;
+	font-family: $headingFont;
+	font-size: 2.5rem;
+	transition:background .3s;
+	&:hover {
+		background:$lagoon;
+	}
+}
+
+.submitbutton {
+	text-align: center;
+}
+
+@media (max-width: 790px){
+	h1 {
+		font-size: 2rem;
+	}
+}
+
+@media (max-width: 720px) {
+	.hero {
+		flex-direction:column;
+		height:800px;
+	}
+
+	.submit{
+		margin-bottom:80px;
+	}
+
+	.clock {
+		padding:70px 0;
+	}
+
+	.buttons {
+		padding:50px 30px;
+
+	}
+}
+
+// 	margin-right: 15px;
+// }
 
 
 // RECIPE STYLES
@@ -172,6 +254,7 @@ main{
 }
 
 	
+
 
 
 
