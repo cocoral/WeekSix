@@ -71,6 +71,7 @@ coolApp.gettime = function () {
 
 coolApp.getinputs = function () {
 	$('.whatToEat').submit(function (e) {
+		window.scrollTo(0, document.body.scrollHeight);
 		allergy = [];
 		e.preventDefault();
 		$('.Allergies input:checked').each(function (i, event) {
