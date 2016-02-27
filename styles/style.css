@@ -628,41 +628,57 @@ main {
           flex-wrap: wrap; }
   #recipes .oneRecipe {
     position: relative;
-    width: 33%;
-    height: 300px;
-    transition: all 1s;
-    -webkit-perspective: 1500px;
-            perspective: 1500px; }
-    #recipes .oneRecipe:hover {
+    width: 33.33%;
+    -webkit-perspective: 1000;
+            perspective: 1000; }
+    #recipes .oneRecipe:hover .flipper,
+    #recipes .oneRecipe .hover .flipper {
       -webkit-transform: rotateY(180deg);
               transform: rotateY(180deg); }
-    #recipes .oneRecipe .static {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      transition: all 1s;
+    #recipes .oneRecipe .flipper {
+      transition: 0.6s;
+      -webkit-transform-style: preserve-3d;
+              transform-style: preserve-3d;
+      position: relative; }
+    #recipes .oneRecipe .static,
+    #recipes .oneRecipe .details {
       -webkit-backface-visibility: hidden;
-              backface-visibility: hidden;
-      color: red;
-      z-index: 2; }
+              backface-visibility: hidden; }
+    #recipes .oneRecipe .static {
+      width: 100%;
+      z-index: 2;
+      -webkit-transform: rotateY(0deg);
+              transform: rotateY(0deg); }
       #recipes .oneRecipe .static .recipe__title {
+        padding-top: 20px;
+        color: #cccccc;
+        width: 100%;
         position: absolute;
         bottom: 0;
-        left: 0;
-        right: 0;
-        background: rgba(255, 255, 255, 0); }
+        background: linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(255, 255, 255, 0)); }
         #recipes .oneRecipe .static .recipe__title h2, #recipes .oneRecipe .static .recipe__title p {
-          padding-left: 20px; }
+          padding-left: 20px;
+          margin: 0; }
+        #recipes .oneRecipe .static .recipe__title h2 {
+          margin-bottom: 10px; }
     #recipes .oneRecipe .details {
-      color: red;
+      padding: 20px 20px;
       position: absolute;
+      top: 20px;
       width: 100%;
-      height: 100%;
-      transition: all 1s;
-      -webkit-transform: rotateY(180deg); }
-
-.oneRecipe:hover .static {
-  -webkit-transform: rotateY(-180deg); }
-
-.oneRecipe:hover .details {
-  -webkit-transform: rotateY(0); }
+      -webkit-transform: rotateY(180deg);
+              transform: rotateY(180deg); }
+    #recipes .oneRecipe a {
+      text-decoration: none;
+      color: #028090; }
+      #recipes .oneRecipe a:hover {
+        color: #456990; }
+    #recipes .oneRecipe ul {
+      margin: 0;
+      padding: 0;
+      padding-bottom: 20px; }
+    #recipes .oneRecipe li {
+      list-style: none;
+      background: #114b5f;
+      color: #cccccc;
+      margin: 1px; }

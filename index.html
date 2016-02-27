@@ -2,7 +2,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name ="keywords" content= "recipies, food, hungry, yummly API, time, cook, snack, main course, mid-night snack, dinner, lunch, Laura Culham, Coral Xinting He, Luke Diamantopoulos, API">
-	<meta name="description" content= "">
+	<meta name="description" content= "At MunchTime we inspire your appetite with carefully selected recipes, perfect for the time of day.">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link href='https://fonts.googleapis.com/css?family=Open+Sans|Abril+Fatface' rel='stylesheet' type='text/css'>
 
@@ -15,23 +15,25 @@
 
 	<title>Munch Time!</title>
 	<script id="recipeTemplate" type='x-handlebars-template'>
-		<div class='oneRecipe'>		
-			<div class='static'>
-				<img src="{{image}}">
-				<div class='recipe__title'>
-					<h2>{{name}}</h2>
-					<p>{{time}}</p>
+		<div class='oneRecipe' ontouchstart="this.classList.toggle('hover');">	
+			<div class='flipper'>	
+				<div class='static'>
+					<img src="{{image}}">
+					<div class='recipe__title'>
+						<p>{{time}}</p>
+						<h2>{{name}}</h2>
+					</div>
 				</div>
-			</div>
-			<div class="details">
-				<ul class='click'>
-					{{#each ingredient}}
-					<li>{{this}}</li>
-					{{/each}}
-				</ul>
-		    	<a href="{{source}}" target="_blank">Click here to see the full recipe!</a>
-	    	</div>
-
+				<div class="details">
+					<ul class='click'>
+						<p> Ingredients </p>
+						{{#each ingredient}}
+						<li>{{this}}</li>
+						{{/each}}
+					</ul>
+			    	<a href="{{source}}" target="_blank">Click here to see the full recipe!</a>
+		    </div>
+		   </div>
 		</div>
 	</script>
 
