@@ -725,6 +725,8 @@ main {
   -webkit-flex-wrap: wrap;
       -ms-flex-wrap: wrap;
           flex-wrap: wrap; }
+  #recipes img {
+    width: 100%; }
   #recipes .oneRecipe {
     position: relative;
     width: 33.33%;
@@ -735,7 +737,7 @@ main {
       -webkit-transform: rotateY(180deg);
               transform: rotateY(180deg); }
     #recipes .oneRecipe .flipper {
-      transition: 0.6s;
+      transition: 1.2s;
       -webkit-transform-style: preserve-3d;
               transform-style: preserve-3d;
       position: relative; }
@@ -761,12 +763,15 @@ main {
         #recipes .oneRecipe .static .recipe__title h2 {
           margin-bottom: 10px; }
     #recipes .oneRecipe .details {
-      padding: 20px 20px;
+      padding: 0 20px 0;
       position: absolute;
       top: 20px;
       width: 100%;
       -webkit-transform: rotateY(180deg);
               transform: rotateY(180deg); }
+      #recipes .oneRecipe .details h2 {
+        font-family: "Abril Fatface", cursive;
+        color: #114b5f; }
     #recipes .oneRecipe a {
       text-decoration: none;
       color: #028090; }
