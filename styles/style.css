@@ -458,6 +458,9 @@ body {
   font-size: 1.2rem;
   font-family: "Open Sans", sans-serif; }
 
+img {
+  width: 100%; }
+
 .hero {
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -555,6 +558,7 @@ ul.allergies, ul.diet {
 
 ul.allergies li, ul.diet li {
   list-style: none;
+
   margin: 0px auto;
   float: left; }
 
@@ -607,3 +611,42 @@ input[type="checkbox"]:checked + label {
     padding: 70px 0; }
   .buttons {
     padding: 50px 30px; } }
+
+/*  margin-right: 15px; }*/
+
+.wrapper {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto; }
+
+main {
+  width: 100%; }
+
+#recipes {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap; }
+  #recipes .oneRecipe {
+    width: 33.33%; }
+    #recipes .oneRecipe .static {
+      position: relative; }
+      #recipes .oneRecipe .static .recipe__title {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        padding-top: 230px;
+        overflow: hidden;
+        transition: all .3s;
+        background: rgba(255, 255, 255, 0); }
+        #recipes .oneRecipe .static .recipe__title:hover {
+          background: rgba(255, 255, 255, 0.5);
+          padding-top: 200px; }
+        #recipes .oneRecipe .static .recipe__title h2, #recipes .oneRecipe .static .recipe__title p {
+          padding-left: 20px; }
+    #recipes .oneRecipe .details {
+      opacity: 0.2; }

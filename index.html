@@ -15,24 +15,30 @@
 
 	<title>Munch Time!</title>
 	<script id="recipeTemplate" type='x-handlebars-template'>
-		<div>
-		<h2>{{name}}</h2>
-		<div class="image"><img src="{{image}}"></div>
-		{{time}}
+		<div class='oneRecipe'>		
+			<div class='static'>
+				<img src="{{image}}">
+				<div class='recipe__title'>
+					<h2>{{name}}</h2>
+					<p>{{time}}</p>
+				</div>
+			</div>
+			<div class="details">
+				<ul class='click'>
+					{{#each ingredient}}
+					<li>{{this}}</li>
+					{{/each}}
+				</ul>
+		    	<a href="{{source}}" target="_blank">Click here to see the full recipe!</a>
+	    	</div>
 
-		<ul>
-		{{#each ingredient}}
-		<li>{{this}}</li>
-		{{/each}}
-		</ul>
-    	<a href="{{source}}" target="_blank">Click here to see the full recipe!</a>
 		</div>
 	</script>
 
 </head>
 
 <body>
-
+	</div>
 	<nav>
 		<img src="asset/logo.png" alt="">
 		<button>About</button>
@@ -103,8 +109,12 @@
 	
 
 	<main id="content">
-		<section id='recipes'></section>
-	<button class="more">Show me more</button>	
+		<div class='wrapper'>
+			<section id="recipes">
+				
+			</section>		
+		</div>
+		<button class="more">Show me more</button>	
 	</main>
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
