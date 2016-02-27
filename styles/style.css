@@ -458,8 +458,111 @@ body {
   font-size: 1.2rem;
   font-family: "Open Sans", sans-serif; }
 
+<<<<<<< HEAD
+#about {
+  display: none;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(17, 75, 95, 0.95);
+  z-index: 9998; }
+
+.overlay-header {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-justify-content: flex-end;
+      -ms-flex-pack: end;
+          justify-content: flex-end; }
+  .overlay-header #overlay-close {
+    background: none;
+    border: 0;
+    margin: 30px 50px; }
+    .overlay-header #overlay-close img {
+      width: 30px;
+      height: auto; }
+
+.overlay-container {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 80vh; }
+
+.main {
+  width: 100%;
+  text-align: center;
+  padding: 0 30px;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center; }
+  .main a {
+    text-decoration: none;
+    opacity: 1;
+    color: #cccccc; }
+  .main h2 {
+    font-size: 3rem;
+    color: white;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    font-family: "Abril Fatface", cursive;
+    letter-spacing: 1px; }
+  .main p {
+    font-size: 2rem;
+    color: #cccccc; }
+  .main .desc {
+    margin-top: 0; }
+  .main .credit {
+    font-size: 1.5rem;
+    padding-left: 10px;
+    margin: 20px 50px 15px;
+    color: #cccccc;
+    opacity: 1; }
+  .main .made {
+    font-size: 1.5rem;
+    margin: 0px; }
+
+.left a:hover {
+  color: white; }
+
+.twitter-share-button {
+  margin-top: 30px; }
+=======
 img {
   width: 100%; }
+>>>>>>> 35257fd6dd85e52f0f2a6966f07030ebdad2262b
 
 .hero {
   display: -webkit-flex;
@@ -503,7 +606,8 @@ nav {
           align-items: center;
   padding: 10px 40px; }
   nav img {
-    width: 200px; }
+    width: 200px;
+    z-index: 9999; }
   nav button {
     background: #114b5f;
     border: none;
