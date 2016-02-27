@@ -15,23 +15,30 @@
 
 	<title>Munch Time!</title>
 	<script id="recipeTemplate" type='x-handlebars-template'>
-		<div>
-		<h2>{{name}}</h2>
-		<div class="image"><img src="{{image}}"></div>
-		{{time}}
+		<div class='oneRecipe'>		
+			<div class='static'>
+				<img src="{{image}}">
+				<div class='recipe__title'>
+					<h2>{{name}}</h2>
+					<p>{{time}}</p>
+				</div>
+			</div>
+			<div class="details">
+				<ul class='click'>
+					{{#each ingredient}}
+					<li>{{this}}</li>
+					{{/each}}
+				</ul>
+		    	<a href="{{source}}" target="_blank">Click here to see the full recipe!</a>
+	    	</div>
 
-		<ul>
-		{{#each ingredient}}
-		<li>{{this}}</li>
-		{{/each}}
-		</ul>
-    	<a href="{{source}}" target="_blank">Click here to see the full recipe!</a>
 		</div>
 	</script>
 
 </head>
 
 <body>
+
 	<!-- --------------- About full page Menu ---->
 	<div id="about">
 		<div class="wrapper">
@@ -63,63 +70,90 @@
 		<img src="asset/logo.png" alt="">
 		
 			<button id="button" >About</button>
-			
+
+	<!-- </div>
+	<nav>
+		<img src="asset/logo.png" alt="">
+
 	</nav>
 
-	
 	<div class="hero">
 	<!-- hero image by Todd Quackenbush -->
-		
-			
-		
 			<!-- clock -->
 			<div class="clock" style="margin:2em;"></div>
 			<!-- clock -->
 				
 			<div class="buttons">
-				<h1>At MunchTime, we inspire your appetite with carefully selected recipes to fit the time of day.</h1>
+				<h1>At MunchTime we inspire your appetite with carefully selected recipes, perfect for the time of day</h1>
 				<form action="" class="whatToEat">
 					<details>
 						
 						<summary class="clearfix"><p>Any Allergies?</p><img src="asset/plus.svg" alt=""></summary>
-						<ul class='Allergies'>
-							<label for="gluten">Gluten</label>
-							<li><input type="checkbox" value="393^Gluten-Free" id="gluten"></li>
-							<label for="egg">Egg</label>
-							<li><input type="checkbox" value="397^Egg-Free" id="egg"></li>
-							<label for="peanuts">Peanuts</label>
-							<li><input type="checkbox" value="394^Peanut-Free" id="peanuts"></li>
-							<label for="dairy">Dairy</label>
-							<li><input type="checkbox" value="396^Dairy-Free" id="dairy"></li>
-							<label for="seafood">Seafood</label>
-							<li><input type="checkbox" value="398^Seafood-Free" id="seafood"></li>
+						<ul class='Allergies clearfix'>
+							
+							<li>
+								<input type="checkbox" value="393^Gluten-Free" id="gluten">
+								<label for="gluten">Gluten</label>
+							</li>
+							
+							<li>
+								<input type="checkbox" value="397^Egg-Free" id="egg">
+								<label for="egg">Egg</label>
+							</li>
+							
+							<li>
+								<input type="checkbox" value="394^Peanut-Free" id="peanuts">
+								<label for="peanuts">Peanuts</label>
+							</li>
+							<li>
+								<input type="checkbox" value="396^Dairy-Free" id="dairy">
+								<label for="dairy">Dairy</label>
+							</li>
+
+							<li>
+								<input type="checkbox" value="398^Seafood-Free" id="seafood">
+								<label for="seafood">Seafood</label>
+							</li>
 						</ul>
 					</details>
 		
 					<details>
 						
-						<summary class="clearfix"><p>Diet?</p><img src="asset/plus.svg" alt=""></summary>
-						<ul class="diet">
-							<label for="vegetarian">Vegetarian</label>
-							<li><input type="checkbox" value="387^Lacto-ovo vegetarian" id="vegetarian"></li>
-							<label for="vegan">Vegan</label>
-							<li><input type="checkbox" value="386^Vegan" id="vegan"></li>
+						<summary class="clearfix"><p>Dietary Restrictions?</p><img src="asset/plus.svg" alt=""></summary>
+						<ul class="diet clearfix">
+							
+							<li>
+								<input type="checkbox" value="387^Lacto-ovo vegetarian" id="vegetarian">
+								<label for="vegetarian">Vegetarian</label>
+							</li>
+							
+							<li>
+								<input type="checkbox" value="386^Vegan" id="vegan">
+								<label for="vegan">Vegan</label>
+							</li>
 						</ul>
 					</details>
-					<input type="submit" value="Feed Me!">
+					<div class="submitbutton">
+						<input type="submit" value="Feed Me!" class="submit"></input>
+					</div>
 				</form>
 			</div>
 		</div>
 	
 
 	<main id="content">
-		<section id='recipes'></section>
-	<button class="more">Show me more</button>	
+		<div class='wrapper'>
+			<section id="recipes">
+				
+			</section>		
+		</div>
+		<button class="more">Show me more</button>	
 	</main>
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 
 	<script src = "https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js"></script>
+	<script src= "smoothscroll.js"></script>
 	<script src='apps/script.js'></script>
 	<script src="styles/flipclock.js"></script>	
 	<!-- twitter button  -->
@@ -136,7 +170,7 @@
 						showSeconds: false
 					});
 				});
-			</script>
+		</script>
 		<!-- ------------------------------Clock javascript -->
 
 </body>

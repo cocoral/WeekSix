@@ -458,6 +458,7 @@ body {
   font-size: 1.2rem;
   font-family: "Open Sans", sans-serif; }
 
+<<<<<<< HEAD
 #about {
   display: none;
   position: fixed;
@@ -558,6 +559,10 @@ body {
 
 .twitter-share-button {
   margin-top: 30px; }
+=======
+img {
+  width: 100%; }
+>>>>>>> 35257fd6dd85e52f0f2a6966f07030ebdad2262b
 
 .hero {
   display: -webkit-flex;
@@ -567,7 +572,8 @@ body {
       -ms-flex-direction: row;
           flex-direction: row;
   background-image: url("../asset/hero.jpg");
-  background-size: cover; }
+  background-size: cover;
+  height: 100vh; }
 
 .clock {
   display: -webkit-flex;
@@ -581,7 +587,8 @@ body {
           justify-content: center;
   -webkit-align-items: center;
       -ms-flex-align: center;
-          align-items: center; }
+          align-items: center;
+  padding: 300px 0; }
 
 nav {
   background: #114b5f;
@@ -608,44 +615,158 @@ nav {
     text-transform: uppercase;
     font-size: 1.4rem;
     font-family: "Open Sans", sans-serif; }
-    nav button:hover {
-      font-weight: bolder; }
 
 h1 {
   margin: 0;
-  padding: 30px;
+  padding: 50px 0px;
   color: #cccccc;
-  font-size: 2rem; }
+  font-size: 2.5rem;
+  font-family: "Abril Fatface", cursive; }
+
+h2 {
+  color: #cccccc;
+  font-size: 1.8rem; }
 
 .buttons {
-  padding: 100px; }
+  padding: 100px 30px;
+  background-color: rgba(0, 0, 0, 0.7); }
 
 details {
   color: #cccccc; }
 
 summary {
   padding: 15px;
+  max-width: 400px;
   border: 2px solid #cccccc;
   font-size: 1.5rem;
-  margin: 10px 0; }
+  margin: 10px auto;
+  outline: none;
+  transition: all .3s; }
+  summary:hover {
+    background: rgba(69, 105, 144, 0.5); }
   summary p {
     display: inline-block;
-    margin: 0; }
+    margin: 0;
+    text-transform: uppercase; }
   summary img {
-    width: 25px;
+    width: 20px;
     float: right; }
 
 summary::-webkit-details-marker {
   display: none; }
 
 ul.allergies, ul.diet {
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-justify-content: flex-start;
-      -ms-flex-pack: start;
-          justify-content: flex-start; }
+  margin: 0 auto;
+  padding: 0;
+  max-width: 400px; }
 
 ul.allergies li, ul.diet li {
   list-style: none;
-  margin-right: 15px; }
+  margin: 0px auto;
+  float: left; }
+
+input[type="checkbox"] {
+  display: none; }
+
+input[type="checkbox"] + label {
+  border: 1px solid transparent;
+  padding: 4px;
+  margin: 3px;
+  transition: all .2s; }
+
+input[type="checkbox"] + label:hover {
+  background: rgba(69, 105, 144, 0.5); }
+
+input[type="checkbox"]:checked + label {
+  border: 1px solid #cccccc;
+  color: #cccccc;
+  background: rgba(69, 105, 144, 0.5); }
+
+.submit {
+  width: 250px;
+  background: #114b5f;
+  color: #cccccc;
+  padding: 10px 20px;
+  margin: 20px 0;
+  border: none;
+  font-family: "Abril Fatface", cursive;
+  font-size: 2.5rem;
+  transition: background .3s; }
+  .submit:hover {
+    background: #028090; }
+
+.submitbutton {
+  text-align: center; }
+
+@media (max-width: 790px) {
+  h1 {
+    font-size: 2rem; } }
+
+@media (max-width: 720px) {
+  .hero {
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: 800px; }
+  .submit {
+    margin-bottom: 80px; }
+  .clock {
+    padding: 70px 0; }
+  .buttons {
+    padding: 50px 30px; } }
+
+.wrapper {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto; }
+
+main {
+  width: 100%; }
+
+#recipes {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap; }
+  #recipes .oneRecipe {
+    position: relative;
+    width: 33%;
+    height: 300px;
+    transition: all 1s;
+    -webkit-perspective: 1500px;
+            perspective: 1500px; }
+    #recipes .oneRecipe:hover {
+      -webkit-transform: rotateY(180deg);
+              transform: rotateY(180deg); }
+    #recipes .oneRecipe .static {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      transition: all 1s;
+      -webkit-backface-visibility: hidden;
+              backface-visibility: hidden;
+      color: red;
+      z-index: 2; }
+      #recipes .oneRecipe .static .recipe__title {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: rgba(255, 255, 255, 0); }
+        #recipes .oneRecipe .static .recipe__title h2, #recipes .oneRecipe .static .recipe__title p {
+          padding-left: 20px; }
+    #recipes .oneRecipe .details {
+      color: red;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      transition: all 1s;
+      -webkit-transform: rotateY(180deg); }
+
+.oneRecipe:hover .static {
+  -webkit-transform: rotateY(-180deg); }
+
+.oneRecipe:hover .details {
+  -webkit-transform: rotateY(0); }

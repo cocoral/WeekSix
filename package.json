@@ -18,7 +18,8 @@
     "gulp-sass": "^2.2.0"
   },
   "dependencies": {
-    "gulp": "^3.9.1"
+    "gulp": "^3.9.1",
+    "postcss-instagram": "^1.0.0"
   },
   "repository": {
     "type": "git",
