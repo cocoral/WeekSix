@@ -592,7 +592,7 @@ body {
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 200px 0; }
+  padding: 150px 0; }
 
 nav {
   background: #114b5f;
@@ -609,6 +609,23 @@ nav {
       -ms-flex-align: center;
           align-items: center;
   padding: 10px 40px; }
+  nav .header-container {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center; }
+    nav .header-container .twitter-share-button {
+      margin: 0 20px 0 0; }
+  nav #button {
+    float: left; }
   nav img {
     width: 140px;
     z-index: 9999; }
