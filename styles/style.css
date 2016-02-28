@@ -481,7 +481,7 @@ body {
   .overlay-header #overlay-close {
     background: none;
     border: 0;
-    margin: 30px 50px; }
+    margin: 18px 50px; }
     .overlay-header #overlay-close img {
       width: 30px;
       height: auto; }
@@ -561,6 +561,12 @@ body {
 .twitter-share-button {
   margin-top: 30px; }
 
+@media (max-width: 720px) {
+  .main p {
+    font-size: 1.8rem; }
+  .made, .credit {
+    font-size: 1.2rem; } }
+
 .hero {
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -585,7 +591,7 @@ body {
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 300px 0; }
+  padding: 200px 0; }
 
 nav {
   background: #114b5f;

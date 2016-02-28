@@ -45,7 +45,7 @@ body{
 	#overlay-close {
 		background: none;
 		border: 0;
-		margin: 30px 50px;
+		margin: 18px 50px;
 		img {
 			width: 30px;
 			height: auto;
@@ -119,6 +119,15 @@ img{
 .twitter-share-button {
 	margin-top: 30px;
 }
+
+@media (max-width: 720px) {
+	.main p {
+		font-size: 1.8rem;
+	}
+	.made, .credit {
+		font-size: 1.2rem;
+	}
+}
 // --------------------------------About overlay end
 .hero {
 	display:flex;
@@ -135,7 +144,7 @@ img{
 	flex-direction:row;
 	justify-content:center;
 	align-items:center;
-	padding:300px 0;
+	padding:200px 0;
 
 }
 
