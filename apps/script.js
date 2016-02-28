@@ -155,8 +155,11 @@ coolApp.displayRecipes = function (info) {
 	var recipeHtml = $('#recipeTemplate').html();
 	var template = Handlebars.compile(recipeHtml);
 	$('#recipes').append(template(info));
-
-	window.scrollTo(0, 700);
+	var location = $('body').scrollTop();
+	location += 900;
+	$('body').scrollTop(location);
+	console.log(location);
+	// window.scrollTo(0, 700);
 	$('.more').addClass('open');
 
 	coolApp.clickToggle();
