@@ -135,6 +135,7 @@ img{
 	flex-direction:row;
 	background-image: url('../asset/hero.jpg');
 	background-size: cover;
+	background-position: center;
 	height:calc(100vh - 62px);
 
 }
@@ -146,6 +147,7 @@ img{
 	justify-content:center;
 	align-items:center;
 	padding:200px 0;
+	
 
 }
 
@@ -330,12 +332,20 @@ button.more.open {
 
 	.clock {
 		padding:70px 0;
+		max-width:100%;
+
+	}
+
+	.flip-clock-wrapper {
+		max-width: 92%;
 	}
 
 	.buttons {
 		padding:50px 30px;
 
 	}
+
+
 }
 
 // 	margin-right: 15px;

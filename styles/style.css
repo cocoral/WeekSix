@@ -577,6 +577,7 @@ body {
           flex-direction: row;
   background-image: url("../asset/hero.jpg");
   background-size: cover;
+  background-position: center;
   height: calc(100vh - 62px); }
 
 .clock {
@@ -734,7 +735,10 @@ button.more.open {
   .submit {
     margin-bottom: 80px; }
   .clock {
-    padding: 70px 0; }
+    padding: 70px 0;
+    max-width: 100%; }
+  .flip-clock-wrapper {
+    max-width: 92%; }
   .buttons {
     padding: 50px 30px; } }
 
