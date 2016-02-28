@@ -456,7 +456,8 @@ html {
 
 body {
   font-size: 1.2rem;
-  font-family: "Open Sans", sans-serif; }
+  font-family: "Open Sans", sans-serif;
+  background: #114b5f; }
 
 #about {
   display: none;
@@ -570,7 +571,7 @@ body {
           flex-direction: row;
   background-image: url("../asset/hero.jpg");
   background-size: cover;
-  height: 100vh; }
+  height: calc(100vh - 62px); }
 
 .clock {
   display: -webkit-flex;
@@ -585,7 +586,7 @@ body {
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 300px 0; }
+  padding: 200px 0; }
 
 nav {
   background: #114b5f;
@@ -627,8 +628,12 @@ h2 {
   font-size: 1.8rem; }
 
 .buttons {
-  padding: 100px 30px;
+  padding: 100px 60px;
   background-color: rgba(0, 0, 0, 0.7); }
+
+@media (min-width: 1300px) {
+  .buttons {
+    padding: 150px 30px; } }
 
 details {
   color: #cccccc; }
@@ -681,7 +686,7 @@ input[type="checkbox"]:checked + label {
   color: #cccccc;
   background: rgba(69, 105, 144, 0.5); }
 
-.submit, button.more.open {
+.submit {
   width: 250px;
   background: #114b5f;
   color: #cccccc;
@@ -691,11 +696,21 @@ input[type="checkbox"]:checked + label {
   font-family: "Abril Fatface", cursive;
   font-size: 2.5rem;
   transition: background .3s; }
-  .submit:hover, button.more.open:hover {
+  .submit:hover {
     background: #028090; }
 
 button.more.open {
-  display: inline-block; }
+  display: inline-block;
+  width: 250px;
+  background: #cccccc;
+  color: #114b5f;
+  margin: 20px 0;
+  border: none;
+  font-family: "Abril Fatface", cursive;
+  font-size: 2.5rem;
+  transition: background .3s; }
+  button.more.open:hover {
+    color: #028090; }
 
 .submitbutton {
   text-align: center; }
@@ -781,13 +796,16 @@ main {
       overflow: scroll; }
       #recipes .oneRecipe .details h2 {
         font-family: "Abril Fatface", cursive;
-        color: #114b5f; }
+        color: #cccccc; }
     #recipes .oneRecipe a {
       text-decoration: none;
-      color: #028090;
-      padding-left: 20px; }
+      color: #cccccc;
+      padding-left: 20px;
+      opacity: .8;
+      background: #028090;
+      padding: 3px 10px; }
       #recipes .oneRecipe a:hover {
-        color: #456990; }
+        opacity: 1; }
     #recipes .oneRecipe ul {
       margin: 0;
       padding: 0 20px 20px;

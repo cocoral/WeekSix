@@ -71,6 +71,8 @@ coolApp.gettime = function () {
 
 coolApp.getinputs = function () {
 	$('.whatToEat').submit(function (e) {
+		start = Math.floor(Math.random() * 20);
+		console.log(start);
 
 		$('#recipes').empty();
 		allergy = [];
@@ -87,11 +89,9 @@ coolApp.getinputs = function () {
 		});
 		diet = diet.join(' ');
 		console.log(diet);
-		coolApp.getRecipe(allergy, diet);
-
-		coolApp.getMore(allergy, diet);
-		start = Math.floor(Math.random() * 10 + 1);
-		console.log(start);
+		coolApp.getRecipe(allergy, diet, start);
+		coolApp.getMore(allergy, diet, start);
+		// start = Math.floor(Math.random() * 10 + 1);
 	});
 };
 
@@ -155,11 +155,16 @@ coolApp.displayRecipes = function (info) {
 	var recipeHtml = $('#recipeTemplate').html();
 	var template = Handlebars.compile(recipeHtml);
 	$('#recipes').append(template(info));
+
+
+	// window.scrollTo(0, 420);
+
 	var location = $('body').scrollTop();
 	location += 900;
 	$('body').scrollTop(location);
 	console.log(location);
-	// window.scrollTo(0, 700);
+
+
 	$('.more').addClass('open');
 
 	coolApp.clickToggle();
