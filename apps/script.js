@@ -72,6 +72,7 @@ coolApp.gettime = function () {
 coolApp.getinputs = function () {
 	$('.whatToEat').submit(function (e) {
 
+		$('#recipes').empty();
 		allergy = [];
 		e.preventDefault();
 		$('.Allergies input:checked').each(function (i, event) {
@@ -156,8 +157,17 @@ coolApp.displayRecipes = function (info) {
 	var template = Handlebars.compile(recipeHtml);
 	// console.log(template);
 	$('#recipes').append(template(info));
+
 	window.scrollTo(0, 700);
 	$('.more').addClass('open');
+
+	coolApp.clickToggle();
+};
+
+coolApp.clickToggle = function () {
+	$('oneRecipe').click(function () {
+		$('oneRecipe').toggleClass('hover');
+	});
 };
 
 $(function () {
