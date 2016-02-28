@@ -541,6 +541,8 @@ body {
   .main p {
     font-size: 2rem;
     color: #cccccc; }
+  .main img {
+    width: 100%; }
   .main .desc {
     margin-top: 0; }
   .main .credit {
@@ -601,7 +603,7 @@ nav {
           align-items: center;
   padding: 10px 40px; }
   nav img {
-    width: 200px;
+    width: 140px;
     z-index: 9999; }
   nav button {
     background: #114b5f;
@@ -609,7 +611,9 @@ nav {
     color: #cccccc;
     text-transform: uppercase;
     font-size: 1.4rem;
-    font-family: "Open Sans", sans-serif; }
+    font-family: "Open Sans", sans-serif;
+    font-weight: 700;
+    letter-spacing: .2; }
 
 h1 {
   margin: 0;
@@ -677,7 +681,7 @@ input[type="checkbox"]:checked + label {
   color: #cccccc;
   background: rgba(69, 105, 144, 0.5); }
 
-.submit {
+.submit, button.more.open {
   width: 250px;
   background: #114b5f;
   color: #cccccc;
@@ -687,8 +691,11 @@ input[type="checkbox"]:checked + label {
   font-family: "Abril Fatface", cursive;
   font-size: 2.5rem;
   transition: background .3s; }
-  .submit:hover {
+  .submit:hover, button.more.open:hover {
     background: #028090; }
+
+button.more.open {
+  display: inline-block; }
 
 .submitbutton {
   text-align: center; }
@@ -781,3 +788,9 @@ main {
       background: #114b5f;
       color: #cccccc;
       margin: 1px; }
+
+.more {
+  display: none; }
+
+.buttonmore {
+  text-align: center; }

@@ -28,7 +28,7 @@ var allergy = [];
 
 var diet = [];
 
-var start = 0;
+var start = 1;
 
 var recipeid = '';
 
@@ -71,7 +71,7 @@ coolApp.gettime = function () {
 
 coolApp.getinputs = function () {
 	$('.whatToEat').submit(function (e) {
-		window.scrollTo(0, document.body.scrollHeight);
+
 		allergy = [];
 		e.preventDefault();
 		$('.Allergies input:checked').each(function (i, event) {
@@ -89,6 +89,8 @@ coolApp.getinputs = function () {
 		coolApp.getRecipe(allergy, diet);
 
 		coolApp.getMore(allergy, diet);
+		start = Math.floor(Math.random() * 10 + 1);
+		console.log(start);
 	});
 };
 
@@ -154,6 +156,8 @@ coolApp.displayRecipes = function (info) {
 	var template = Handlebars.compile(recipeHtml);
 	// console.log(template);
 	$('#recipes').append(template(info));
+	window.scrollTo(0, 700);
+	$('.more').addClass('open');
 };
 
 $(function () {

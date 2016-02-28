@@ -87,9 +87,9 @@ body{
 		color: $mutedwhite;
 	}
 
-// img{
-// 	width:100%;
-// }
+img{
+	width:100%;
+}
 
 
 
@@ -124,6 +124,7 @@ body{
 	background-image: url('../asset/hero.jpg');
 	background-size: cover;
 	height:100vh;
+
 }
 
 	
@@ -143,8 +144,9 @@ nav {
 	justify-content:space-between;
 	align-items:center;
 	padding: 10px 40px;
+
 	img {
-		width: 200px;
+		width: 140px;
 		z-index: 9999;
 	}
 	button {
@@ -154,6 +156,8 @@ nav {
 		text-transform: uppercase;
 		font-size: 1.4rem;
 		font-family: $mainFont;
+		font-weight: 700;
+		letter-spacing: .2;
 	
 	}
 }
@@ -250,7 +254,10 @@ input[type="checkbox"]:checked + label {
 }
 
 
-.submit {
+
+
+.submit, button.more.open {
+	// display:block;
 	width: 250px;
 	background:$teal;
 	color:$mutedwhite;
@@ -263,6 +270,11 @@ input[type="checkbox"]:checked + label {
 	&:hover {
 		background:$lagoon;
 	}
+}
+
+button.more.open {
+	display:inline-block;
+
 }
 
 .submitbutton {
@@ -309,9 +321,13 @@ input[type="checkbox"]:checked + label {
 main{
 	width:100%;
 
+	}
 
 
-}
+
+
+
+
 #recipes{
 	display: flex;
 	flex-wrap:wrap;
@@ -384,18 +400,14 @@ main{
 
 
 
+.more {
+	display:none;
 
+}
 
-
-
-
-
-
-
-
-
-
-
+.buttonmore {
+	text-align: center;
+}
 
 
 
