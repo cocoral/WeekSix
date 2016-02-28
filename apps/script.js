@@ -136,7 +136,6 @@ coolApp.getRecipe = function (allergy, diet, start) {
 				info.source = meal.source.sourceRecipeUrl;
 				info.ingredient = meal.ingredientLines;
 				info.image = meal.images[0].hostedLargeUrl;
-				// displayRecipes.push(info);
 				coolApp.displayRecipes(info);
 			});
 		});
@@ -155,7 +154,6 @@ coolApp.displayRecipes = function (info) {
 	console.log(info);
 	var recipeHtml = $('#recipeTemplate').html();
 	var template = Handlebars.compile(recipeHtml);
-	// console.log(template);
 	$('#recipes').append(template(info));
 
 	window.scrollTo(0, 700);
