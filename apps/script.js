@@ -38,7 +38,7 @@ coolApp.init = function () {
 
 	coolApp.gettime();
 	coolApp.getinputs();
-
+	coolApp.getMore();
 	$('#button').on('click', function (e) {
 		$('#about').fadeIn();
 	});
@@ -71,9 +71,6 @@ coolApp.gettime = function () {
 
 coolApp.getinputs = function () {
 	$('.whatToEat').submit(function (e) {
-		start = Math.floor(Math.random() * 20);
-		console.log(start);
-
 		$('#recipes').empty();
 		allergy = [];
 		e.preventDefault();
@@ -89,18 +86,19 @@ coolApp.getinputs = function () {
 		});
 		diet = diet.join(' ');
 		console.log(diet);
-		coolApp.getRecipe(allergy, diet, start);
-		coolApp.getMore(allergy, diet, start);
+		coolApp.getRecipe(allergy, diet);
+		// coolApp.getMore(allergy, diet);
 		// start = Math.floor(Math.random() * 10 + 1);
 	});
 };
 
 // coolApp.getinputs();
 
-coolApp.getRecipe = function (allergy, diet, start) {
+coolApp.getRecipe = function (allergy, diet) {
 	console.log(mealtime);
-	console.log(allergy, diet);
-
+	// console.log(allergy, diet);
+	start = Math.floor(Math.random() * 20);
+	console.log(start);
 	$.ajax({
 		url: 'http://api.yummly.com/v1/api/recipes?_app_id=9a82c4a1&_app_key=d750f8a3c48c097b49c0082762f6a0ae',
 		type: 'GET',
@@ -127,7 +125,6 @@ coolApp.getRecipe = function (allergy, diet, start) {
 				type: 'GET',
 				dataType: 'jsonp'
 			}).then(function (meal) {
-
 				console.log(meal);
 				var info = {};
 				info.name = meal.name;
@@ -142,7 +139,7 @@ coolApp.getRecipe = function (allergy, diet, start) {
 	});
 };
 
-coolApp.getMore = function (allergy, diet) {
+coolApp.getMore = function () {
 	$('.more').on('click', function () {
 		start = start + 3;
 		console.log(start);
@@ -156,14 +153,17 @@ coolApp.displayRecipes = function (info) {
 	var template = Handlebars.compile(recipeHtml);
 	$('#recipes').append(template(info));
 
-
 	// window.scrollTo(0, 420);
 
-	var location = $('body').scrollTop();
-	location += 900;
-	$('body').scrollTop(location);
-	console.log(location);
-
+	// var location = $('body').scrollTop();
+	// location += 900;
+	// $('body').scrollTop(location);
+	// console.log(location);
+	setTimeout(function () {
+		$('body,html').animate({
+			scrollTop: document.body.scrollHeight
+		}, 400);
+	}, 200);
 
 	$('.more').addClass('open');
 
