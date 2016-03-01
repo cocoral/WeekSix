@@ -97,7 +97,7 @@ coolApp.getinputs = function () {
 coolApp.getRecipe = function (allergy, diet) {
 	console.log(mealtime);
 	// console.log(allergy, diet);
-	start = Math.floor(Math.random() * 20);
+	start = Math.floor(Math.random() * 50);
 	console.log(start);
 	$.ajax({
 		url: 'http://api.yummly.com/v1/api/recipes?_app_id=9a82c4a1&_app_key=d750f8a3c48c097b49c0082762f6a0ae',
@@ -155,6 +155,7 @@ coolApp.displayRecipes = function (info) {
 
 	// window.scrollTo(0, 420);
 
+
 	// var location = $('body').scrollTop();
 	// location += 900;
 	// $('body').scrollTop(location);
@@ -164,6 +165,7 @@ coolApp.displayRecipes = function (info) {
 			scrollTop: document.body.scrollHeight
 		}, 400);
 	}, 200);
+
 
 	$('.more').addClass('open');
 
